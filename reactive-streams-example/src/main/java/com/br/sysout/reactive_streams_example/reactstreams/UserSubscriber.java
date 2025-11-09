@@ -14,7 +14,7 @@ import org.reactivestreams.Subscription;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserSubscriber implements Subscriber {
+public class UserSubscriber implements Subscriber<String> {
 
     // Nome do assinante (para identificar nas mensagens do console)
     private String name;
@@ -36,7 +36,7 @@ public class UserSubscriber implements Subscriber {
      * Chamado toda vez que o Publisher envia um novo item (vídeo).
      */
     @Override
-    public void onNext(Object video) {
+    public void onNext(String video) {
         System.out.println("onNext("+video+")");
 
     }
